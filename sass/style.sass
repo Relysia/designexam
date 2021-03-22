@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap')
+
+$backgroundColor: #22b573ff
+$cardOne: #1c1717ff
+$cardTwo: #f2f2f2ff
+$yellowText: #fcb84b
+$whiteText: #fafafa
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: 'Roboto', sans-serif
+
+body
+  background: $backgroundColor
+
+h1
+  position: absolute
+  top: 30px
+  left: 50%
+  transform: translateX(-50%)
+  text-transform: uppercase
+  letter-spacing: 3px
+  color: $whiteText
+  font-weight: 200
+  font-size: 3.5rem
+
+main
+  min-height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+
+section
+  padding: 100px
+  display: grid
+  grid-template-columns: repeat(3, 350px)
+  justify-items: center
+  gap: 5rem
+  div
+    position: relative
+    padding: 30px 35px
+    height: 100%
+    min-width: 350px
+    h2, h3
+      color: $yellowText
+    h2
+      line-height: 1.4
+      font-size: 1.3rem
+      font-weight: 400
+    h2:nth-last-of-type(1)
+      margin-bottom: 25px
+    h3
+      position: absolute
+      bottom: -40px
+      left: 0px
+      font-size: 1.1rem
+      letter-spacing: 3px
+      font-weight: 700
+      text-transform: uppercase
+    .date
+      letter-spacing: .1px
+    p
+      letter-spacing: 1px
+      font-size: 15px
+      line-height: 2
+  div:nth-of-type(1)
+    background: $cardOne
+    p
+      color: $whiteText
+  div:nth-of-type(2)
+    background: $cardTwo
+    p
+      color: #454646
+  div:nth-of-type(3)
+    background: $cardOne
+    position: relative
+    svg
+      color: $whiteText
+      width: 130px
+      height: 130px
+      border: 1px solid $whiteText
+      border-radius: 50%
+      padding: 12px
+      position: absolute
+      top: 27%
+      left: 50%
+      transform: translateX(-50%)
+    h2
+      position: absolute
+      bottom: 0px
+      left: 35px
+
+.hamburger
+  background: $cardOne
+  border-radius: 50%
+  height: 90px
+  width: 90px
+  position: absolute
+  top: 20px
+  right: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  gap: 7px
+  div
+    width: 45px
+    height: 7px
+    background: $whiteText
+
+@media (max-width: 1290px)
+  h1
+    font-size: 20px
+    left: 45px
+    top: 45px
+    transform: translateX(0)
+
+  section
+    margin-top: 50px
+    grid-template-columns: 1fr
+    div
+      min-height: 500px
+      width: 100%
+
+  .hamburger
+    width: 70px
+    height: 70px
+    gap: 5px
+    div
+      height: 5px
+      width: 37px
